@@ -18,8 +18,17 @@
       <file leaf-file-name="number_dict.erl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/number_dict.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="363">
+              <caret line="80" column="62" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newdictionary.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newdictionary.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1139228">
+              <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -27,7 +36,7 @@
       <file leaf-file-name="dictionary" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out/production/num_dictionary/dictionary">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="-2647809">
               <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             </state>
           </provider>
@@ -36,7 +45,7 @@
       <file leaf-file-name="dictionary" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dictionary">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210615">
+            <state relative-caret-position="208108">
               <caret line="14041" column="10" selection-start-line="14041" selection-start-column="10" selection-end-line="14041" selection-end-column="10" />
             </state>
           </provider>
@@ -57,6 +66,9 @@
       <find>cc</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -69,6 +81,7 @@
     <option name="width" value="1418" />
     <option name="height" value="815" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -87,6 +100,30 @@
             <path>
               <item name="num_dictionary" type="b2602c69:ProjectViewProjectNode" />
               <item name="num_dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="num_dictionary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="num_dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="num_dictionary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="num_dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="num_dictionary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="num_dictionary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="num_dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="num_dictionary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="num_dictionary" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -99,7 +136,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -182,6 +219,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1418" height="815" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -192,7 +230,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32928476" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -241,24 +279,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/num_dictionary/dictionary">
+    <entry file="file://$PROJECT_DIR$/src/dictionary">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="208108">
+          <caret line="14041" column="10" selection-start-line="14041" selection-start-column="10" selection-end-line="14041" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dictionary">
+    <entry file="file://$PROJECT_DIR$/newdictionary.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210615">
-          <caret line="14041" column="10" selection-start-line="14041" selection-start-column="10" selection-end-line="14041" selection-end-column="10" />
+        <state relative-caret-position="-1139228">
+          <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/num_dictionary/dictionary">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2647809">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/number_dict.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="363">
+          <caret line="80" column="62" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
         </state>
       </provider>
     </entry>

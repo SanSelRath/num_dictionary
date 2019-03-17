@@ -10,7 +10,7 @@
 -author("santhosh-6358").
 
 %% API
--export([num_to_alphabet/3,number_splitup/1,check_string/3]).
+-export([num_to_alphabet/3,number_splitup/1,check_string/3,eff_file_create/0]).
 
 
 number_splitup(Number) -> string_content(num_to_alphabet(Number,Number rem 10,[])).
@@ -29,20 +29,19 @@ num_to_alpha_list(9) -> ["w","x","y","z"].
 
 string_content([L1,L2,L3]) ->
   List = check_string([L1,L2,L3],{L2,L3},[]),
-  {ok,FileDesc} = file:open("dictionary",read),
-  match_with_file(List,string:lowercase(read_content(FileDesc)),FileDesc,[]).
+  {ok,FileDesc} = file:open("newdictionary.txt",read),
+  match_with_file(List,read_content(FileDesc),FileDesc,[]).
 
 
 match_with_file([],_,_,Results) ->Results;
 match_with_file([String|Rest],String,_,Results) ->
-  {ok,FileDesc} = file:open("dictionary",read),
-  io:format("Matched ~p~n",[String]),
-  match_with_file(Rest,string:lowercase(read_content(FileDesc)),FileDesc,[String|Results]);
+  {ok,FileDesc} = file:open("newdictionary.txt",read),
+  match_with_file(Rest,read_content(FileDesc),FileDesc,[String|Results]);
 match_with_file([_|Rest],[],_,Results) ->
-  {ok,FileDesc} = file:open("dictionary",read),
-  match_with_file(Rest,string:lowercase(read_content(FileDesc)),FileDesc,Results);
+  {ok,FileDesc} = file:open("newdictionary.txt",read),
+  match_with_file(Rest,read_content(FileDesc),FileDesc,Results);
 match_with_file(Strings,_,Conn,Results) ->
-  match_with_file(Strings,string:lowercase(read_content(Conn)),Conn,Results).
+  match_with_file(Strings,read_content(Conn),Conn,Results).
 
 
 read_content(FileDescr) ->
@@ -58,5 +57,36 @@ check_string([[Char1|R1],[Char2,CharN|R2],[Char3]],{_,C}=Clone,Res) -> check_str
 check_string([[Char1|R1],[Char2|R2],[Char3,CharN|R3]],Clone,Res) -> check_string([[Char1|R1],[Char2|R2],[CharN|R3]],Clone,[Char1++Char2++Char3 |Res]).
 
 
+eff_file_create() ->
+  {ok,FileDesc} = file:open("dictionary",read),
+  {ok, FileWrite} = file:open("newdictionary.txt", [write]),
+  Value = io:get_line(FileDesc, '\n'),
+  enter_data(FileDesc,FileWrite,Value).
 
 
+
+
+enter_data(_,_,eof) ->done;
+enter_data(FileDesc,FileWrite,Value) ->
+  NewString = string:lowercase(string:trim(Value)),
+  write_or_not(NewString,FileDesc,FileWrite).
+
+write_or_not(NewString,FileDesc,FileWrite) when length(NewString)=:=10 ; length(NewString) > 2 , length(NewString) =<  7 ->
+  io:format(FileWrite,"~s~n",[NewString]),
+  enter_data(FileDesc,FileWrite,io:get_line(FileDesc, '\n'));
+write_or_not(_,FileDesc,FileWrite) ->
+  enter_data(FileDesc,FileWrite,io:get_line(FileDesc, '\n')).
+
+%% 176000 count decreased to 76000
+%%  Hey decreased from 27 sec to 10 sec after eff_file_created
+
+
+%% combo1 -> 10
+%% combo2 -> 7,3
+%% combo3 -> 3,7
+%% combo4 -> 6,4
+%% combo5 -> 4,6
+%% combo6 -> 5,5
+%% combo7 -> 4,3,3
+%% combo8 -> 3,4,3
+%% combo9 -> 3,3,4
